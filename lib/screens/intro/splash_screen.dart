@@ -43,10 +43,8 @@ class _SplashScreenState extends State<SplashScreen> {
       body: BlocListener<ConfigurationBloc, ConfigurationState>(
         listener: (context, state) {
           if (state is ConfigurationLoaded) {
-            // Handle the loaded configuration if needed
           } else if (state is ConfigurationError) {
             log(state.message.toString());
-            // Handle the error if needed
           }
         },
         child: Center(
