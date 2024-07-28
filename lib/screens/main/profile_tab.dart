@@ -1,11 +1,9 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../blocs/profile/profile_bloc.dart';
 import '../../blocs/profile/profile_event.dart';
 import '../../blocs/profile/profile_state.dart';
-import '../../widgets/language_dialog.dart';
 
 
 class ProfileTab extends StatefulWidget {
@@ -36,10 +34,6 @@ class _ProfileTabState extends State<ProfileTab> {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Name: ${user.displayName ?? 'N/A'}', style: const TextStyle(fontSize: 18)),
-                  const SizedBox(height: 10),
-                  Text('Email: ${user.email ?? 'N/A'}', style: const TextStyle(fontSize: 18)),
-                  const SizedBox(height: 10),
                   Text('Phone: ${user.phoneNumber ?? 'N/A'}', style: const TextStyle(fontSize: 18)),
                   const Spacer(),
                   ElevatedButton(
